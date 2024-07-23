@@ -9,8 +9,13 @@
 # Return the resulting string.
 
 def verbing(s):
-    # +++your code here+++
-    return
+    if (len(s) < 3):
+        return s
+    elif s.endswith("ing"):
+        return s + "ly"
+    else:
+        return s + "ing"
+        
 
 
 # E. not_bad
@@ -23,8 +28,11 @@ def verbing(s):
 # This dinner is good!
 
 def not_bad(s):
-    # +++your code here+++
-    return
+    for word in s:
+        if s.find("not") < s.find("bad"):
+            return (s.replace(s[s.find("not"): s.find("bad") + 3], "good"))
+        else:
+            return s
 
 
 # F. front_back
@@ -35,9 +43,26 @@ def not_bad(s):
 # Given 2 strings, a and b, return a string of the form
 #  a-front + b-front + a-back + b-back
 
+# Find length of given strings
+
+
 def front_back(a, b):
-    # +++your code here+++
-    return
+    first_length = len(a)
+    second_length = len(b)
+    first_split = int(len(a) /2)
+    second_split = int(len(b) /2)
+    
+
+    if (first_length % 2 == 0) and (second_length % 2 == 0):
+        return(a[:first_split] + b[:second_split] + a[first_split:] + b[second_split:])
+    elif(first_length % 2 != 0) and (second_length % 2 == 0):
+        return(a[:first_split + 1] + b[:second_split] + a[first_split + 1:] + b[second_split:])
+    elif(first_length % 2 == 0) and (second_length % 2 != 0):
+        return(a[:first_split] + b[:second_split + 1] + a[first_split:] + b[second_split + 1:])
+    else:
+        return(a[:first_split + 1] + b[:second_split + 1] + a[first_split + 1:] + b[second_split + 1:])
+
+
 
 
 # Simple provided test() function used in main() to print
