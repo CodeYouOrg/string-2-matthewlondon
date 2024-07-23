@@ -15,9 +15,7 @@ def verbing(s):
         return s + "ly"
     else:
         return s + "ing"
-        
-
-
+    
 # E. not_bad
 # Given a string, find the first appearance of the
 # substring 'not' and 'bad'. If the 'bad' follows
@@ -34,7 +32,6 @@ def not_bad(s):
         else:
             return s
 
-
 # F. front_back
 # Consider dividing a string into two halves.
 # If the length is even, the front and back halves are the same length.
@@ -44,7 +41,6 @@ def not_bad(s):
 #  a-front + b-front + a-back + b-back
 
 # Find length of given strings
-
 
 def front_back(a, b):
     first_length = len(a)
@@ -61,8 +57,6 @@ def front_back(a, b):
         return(a[:first_split] + b[:second_split + 1] + a[first_split:] + b[second_split + 1:])
     else:
         return(a[:first_split + 1] + b[:second_split + 1] + a[first_split + 1:] + b[second_split + 1:])
-
-
 
 
 # Simple provided test() function used in main() to print
