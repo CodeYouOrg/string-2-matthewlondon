@@ -50,13 +50,13 @@ def front_back(a, b):
     
 
     if (first_length % 2 == 0) and (second_length % 2 == 0):
-        return(a[:first_split] + b[:second_split] + a[first_split:] + b[second_split:])
+        return a[:first_split] + b[:second_split] + a[first_split:] + b[second_split:]
     elif(first_length % 2 != 0) and (second_length % 2 == 0):
-        return(a[:first_split + 1] + b[:second_split] + a[first_split + 1:] + b[second_split:])
+        return a[:first_split + 1] + b[:second_split] + a[first_split + 1:] + b[second_split:]
     elif(first_length % 2 == 0) and (second_length % 2 != 0):
-        return(a[:first_split] + b[:second_split + 1] + a[first_split:] + b[second_split + 1:])
+        return a[:first_split] + b[:second_split + 1] + a[first_split:] + b[second_split + 1:]
     else:
-        return(a[:first_split + 1] + b[:second_split + 1] + a[first_split + 1:] + b[second_split + 1:])
+        return a[:first_split + 1] + b[:second_split + 1] + a[first_split + 1:] + b[second_split + 1:]
 
 
 # Simple provided test() function used in main() to print
